@@ -1,0 +1,8 @@
+os: linux
+arch: ppc64le
+
+before_script:
+  - chmod +x script.sh
+ 
+script:
+  - docker run -t --rm -v $PWD:/tmp registry.access.redhat.com/ubi8:latest bash -c "/tmp/script.sh"
