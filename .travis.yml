@@ -1,5 +1,6 @@
 os: linux
 arch: ppc64le
+dist: focal
 
 before_script:
   - chmod +x script.sh
