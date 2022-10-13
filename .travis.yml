@@ -4,6 +4,9 @@ dist: focal
 
 before_script:
   - chmod +x script.sh
- 
+
+services:
+  - docker
+  
 script:
-  - docker run -t --rm -v $PWD:/tmp registry.access.redhat.com/ubi8:latest bash -c "/tmp/script.sh"
+  - docker run -t --rm -v $PWD:/tmp registry.access.redhat.com/ubi8/ubi:8.5 bash -c "/tmp/script.sh"
